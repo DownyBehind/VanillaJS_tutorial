@@ -97,6 +97,20 @@ title.addEventListener("click", handleClick);
 
 const title = document.querySelector("#title"); //DOM
 
+const CLICKED_CLASS = "clicked";
+
+function handleClick() {
+  /*
+  const hasClass = title.classList.contains(CLICKED_CLASS);
+  if (hasClass) {
+    title.classList.add(CLICKED_CLASS);
+  } else {
+    title.classList.remove(CLICKED_CLASS);
+  }
+  */
+  title.classList.toggle(CLICKED_CLASS);
+}
+/*
 const BASE_COLOR = "green";
 const OTHER_COLOR = "#e84393";
 
@@ -108,10 +122,11 @@ function handleClick() {
     title.style.color = BASE_COLOR;
   }
 }
-
+*/
 function init() {
-  title.style.color = BASE_COLOR;
+  //title.style.color = BASE_COLOR;
   title.addEventListener("click", handleClick);
+  //title.addEventListener("mouseenter", handleClick);
 }
 
 init();
